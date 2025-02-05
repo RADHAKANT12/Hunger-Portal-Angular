@@ -1,0 +1,7 @@
+<div  class="d-flex flex-wrap justify-content-center" >
+    <!-- <app-child [imageUrl]="restaurants.imageUrl"></app-child> -->
+    <!-- <app-child *ngFor="let restaurant of restaurants" [imageUrl]="restaurant.imageUrl"></app-child> -->
+    <app-restaurant  *ngFor="let restaurant of restaurants" [restaurant]="restaurant" class="mx-2 my-2"></app-restaurant>
+    
+    
+</div>
