@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject, inject } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hunger-frontend-ui';
-}
+
+  constructor(){
+    console.log("app component called")
+    inject(AuthService).logout()
+
+    }
+  }
+
